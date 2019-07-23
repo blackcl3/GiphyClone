@@ -3,3 +3,4 @@
 //
 //
 // app.appendChild(container)
+"use strict";
