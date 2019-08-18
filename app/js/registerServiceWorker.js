@@ -1,9 +1,8 @@
 // const request = new XMLHttpRequest ()
 const app = document.getElementById('root');
-const container = document.createElement('div');
-let myRequest = new Request('http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=1ujrwsGkeMKXmEjKADBLp5l02Wtz9q99&limit=5')
+let myRequest = new Request('http://api.giphy.com/v1/gifs/search?q=snacks&api_key=1ujrwsGkeMKXmEjKADBLp5l02Wtz9q99&limit=15')
 
-app.appendChild(container)
+// app.appendChild(container)
 
 
 
@@ -51,18 +50,18 @@ fetch(myRequest)
               console.log(cards.title)
               let card = document.createElement('div');
               card.setAttribute('class', 'card');
-
-              const h2 = document.createElement('h2');
+              const container = document.getElementById('container')
+              const paragraph = document.createElement('p');
               const img = document.createElement('img')
-              h2.textContent = cards.title;
+              paragraph.textContent = cards.title;
 
 
-              img.setAttribute('src', cards.images.fixed_height.url)
+              img.setAttribute('src', cards.images.original.url)
               img.setAttribute('class', 'giphImage')
               console.log(img)
               container.appendChild(card)
-              container.appendChild(img)
-              container.appendChild(h2)
+              card.appendChild(img)
+              card.appendChild(paragraph)
 
         })
     }

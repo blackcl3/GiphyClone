@@ -2,9 +2,8 @@
 
 // const request = new XMLHttpRequest ()
 var app = document.getElementById('root');
-var container = document.createElement('div');
-var myRequest = new Request('http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=1ujrwsGkeMKXmEjKADBLp5l02Wtz9q99&limit=5');
-app.appendChild(container); // // request.open('GET', 'http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=1ujrwsGkeMKXmEjKADBLp5l02Wtz9q99&limit=20')
+var myRequest = new Request('http://api.giphy.com/v1/gifs/search?q=snacks&api_key=1ujrwsGkeMKXmEjKADBLp5l02Wtz9q99&limit=15'); // app.appendChild(container)
+// // request.open('GET', 'http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=1ujrwsGkeMKXmEjKADBLp5l02Wtz9q99&limit=20')
 // //
 // // //javascript, jQuery
 // //
@@ -45,15 +44,16 @@ function (response) {
       console.log(cards.title);
       var card = document.createElement('div');
       card.setAttribute('class', 'card');
-      var h2 = document.createElement('h2');
+      var container = document.getElementById('container');
+      var paragraph = document.createElement('p');
       var img = document.createElement('img');
-      h2.textContent = cards.title;
-      img.setAttribute('src', cards.images.fixed_height.url);
+      paragraph.textContent = cards.title;
+      img.setAttribute('src', cards.images.original.url);
       img.setAttribute('class', 'giphImage');
       console.log(img);
       container.appendChild(card);
-      container.appendChild(img);
-      container.appendChild(h2);
+      card.appendChild(img);
+      card.appendChild(paragraph);
     });
   } // for (let i of Object.keys(data)) {
   //       let giphyURL = data.data;

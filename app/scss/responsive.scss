@@ -1,0 +1,40 @@
+@media screen and (max-width: 400px) {
+    .card {
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .search {
+      width: 75%;
+    }
+}
+
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
+    .search {
+      width: 80%;
+    }
+
+    .card p {
+      font-size: .85em;
+
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+  .card {
+      width: auto;
+  }
+
+  .card p {
+    font-size: 1.25em;
+  }
+
+  .giphImage {
+    height: 175px;
+    width: 175px;
+  }
+
+}

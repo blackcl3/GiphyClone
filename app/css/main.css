@@ -15,24 +15,23 @@ body {
 form {
   background: white; }
 
-.container {
+#container {
   display: flex;
   flex-wrap: wrap; }
 
 .card {
-  margin: 1rem;
-  border: 1px solid gray; }
+  margin: auto;
+  width: 35%;
+  padding: 20px; }
+
+.card p {
+  text-align: center;
+  font-size: 0.875em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px; }
 
 .giphImage {
-  width: 25%; }
-
-.search {
-  width: 85%; }
-
-@media screen and (min-width: 600px) {
-  .card {
-    flex: 1 1 calc(50% - 2rem); } }
-
-@media screen and (min-width: 900px) {
-  .card {
-    flex: 1 1 calc(33% - 2rem); } }
+  height: 150px;
+  width: 150px; }
